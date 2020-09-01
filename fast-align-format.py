@@ -28,6 +28,10 @@ import re
 import os
 
 def tab(text):
+	"""
+	Fonction qui permet après lecture d'un fichier d'ajouter chacune des 
+	lignes de ce fichier comme élément d'une liste.
+	"""
 	table=[]
 	for line in text:
 		line=line.strip()
@@ -35,6 +39,11 @@ def tab(text):
 	return table
 
 def propre(s):
+	"""
+	Fonction qui épure le texte de caractères de ponctuations non-conformes,
+	comme les apostrophes différentes et les signes de ponctuation gênants
+	qui seraient encore présents dans le texte.
+	"""
 	regex= re.compile(r"\s(\W|·)\s")
 	new=regex.sub(" ",s)
 	new=new.replace("ʼ","'")

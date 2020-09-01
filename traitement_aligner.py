@@ -93,8 +93,10 @@ def tri(dictionnaire):
 
 #On récupère le nom des fichiers à ouvrir
 
-srcFile=sys.argv[0]
-alignement=sys.argv[1]
+srcFile=sys.argv[1]
+alignement=sys.argv[2]
+# ~ srcFile="Corpus_fast-align-200.txt"
+# ~ alignement="forward-long.align"
 
 #On ouvre les fichiers
 
